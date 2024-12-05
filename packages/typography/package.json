@@ -1,7 +1,7 @@
 {
   "name": "@sipe-team/typography",
   "description": "Typography component for Sipe Design System",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -9,7 +9,9 @@
   },
   "type": "module",
   "exports": "./src/index.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "build:storybook": "storybook build",
@@ -19,8 +21,14 @@
     "typecheck": "tsc",
     "prepack": "pnpm run build"
   },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
+    "@sipe-team/tokens": "workspace:^",
+    "clsx": "^2.1.1"
+  },
   "devDependencies": {
     "@biomejs/biome": "catalog:",
+    "@faker-js/faker": "^9.2.0",
     "@storybook/addon-essentials": "catalog:",
     "@storybook/addon-interactions": "catalog:",
     "@storybook/addon-links": "catalog:",
@@ -28,6 +36,8 @@
     "@storybook/react": "catalog:",
     "@storybook/react-vite": "catalog:",
     "@storybook/test": "catalog:",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
     "@types/react": "^18.3.12",
     "happy-dom": "catalog:",
     "react": "^18.3.1",
@@ -41,6 +51,7 @@
   },
   "publishConfig": {
     "access": "public",
+    "registry": "https://npm.pkg.github.com",
     "exports": {
       ".": {
         "import": {
